@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for LinkedIn Lead Engine™ | BuzzSavvy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+
+<body class="form-body">
+
+    <div class="form-page-container">
+        <header class="form-header">
+            <h1 class="form-title">LinkedIn Lead Engine™</h1>
+            <p class="form-subtitle">Designed for founders seeking predictable demand. Please fill out the details
+                below.</p>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <form id="application-form" data-redirect="https://calendly.com/buzzsavvy/qualification-call">
+
+            <!-- Step 1: Basic Info -->
+            <div class="form-step active">
+                <div class="question-group">
+                    <label class="question-label" for="full-name">Full name *</label>
+                    <input type="text" id="full-name" name="name" class="form-input" placeholder="Enter your full name"
+                        required>
+                </div>
+                <div class="question-group">
+                    <label class="question-label" for="linkedin-url">LinkedIn profile URL *</label>
+                    <input type="url" id="linkedin-url" name="linkedin" class="form-input"
+                        placeholder="https://linkedin.com/in/yourprofile" required>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Role & Outcome -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label">Your role *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Founder" required>
+                            <span class="choice-label">Founder</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Coach">
+                            <span class="choice-label">Coach</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Consultant">
+                            <span class="choice-label">Consultant</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="question-group">
+                    <label class="question-label">Your primary outcome *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="outcome" value="3–5 qualified leads weekly" required>
+                            <span class="choice-label">3–5 qualified leads weekly</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="outcome" value="Consistent booked conversations">
+                            <span class="choice-label">Consistent booked conversations</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="outcome" value="Predictable pipeline">
+                            <span class="choice-label">Predictable pipeline</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="outcome" value="Authority plus demand">
+                            <span class="choice-label">Authority plus demand</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Audience & Outbound -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label" for="ideal-client">Describe your ideal client *</label>
+                    <textarea id="ideal-client" name="client" class="form-input" placeholder="My ideal client is..."
+                        required></textarea>
+                </div>
+                <div class="question-group">
+                    <label class="question-label">Current relationship with outbound *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="outbound" value="Using it inconsistently" required>
+                            <span class="choice-label">Using it inconsistently</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="outbound" value="Open to implementing it">
+                            <span class="choice-label">Open to implementing it</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="outbound" value="Not aligned with outbound">
+                            <span class="choice-label">Not aligned with outbound</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Challenges & Investment -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label" for="blocking">What is currently blocking consistent results on
+                        LinkedIn? *</label>
+                    <textarea id="blocking" name="blocker" class="form-input" placeholder="Explain the main hurdles..."
+                        required></textarea>
+                </div>
+                <div class="question-group">
+                    <label class="question-label">Monthly investment range *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="investment" value="$2,000+" required>
+                            <span class="choice-label">$2,000+ / ₹1.6L+</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="investment" value="$3,000+">
+                            <span class="choice-label">$3,000+ / ₹2.5L+</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="investment" value="$5,000+">
+                            <span class="choice-label">$5,000+ / ₹4L+</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Timeline & Commitment -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label">When are you ready to start? *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="start" value="Immediately" required>
+                            <span class="choice-label">Immediately</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="start" value="Next 30 days">
+                            <span class="choice-label">Next 30 days</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="start" value="Next quarter">
+                            <span class="choice-label">Next quarter</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="question-group">
+                    <label class="question-label">Do you understand this system includes outbound, positioning, and
+                        execution support, not ads or virality? *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="system" value="Yes" required>
+                            <span class="choice-label">Yes</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="system" value="No">
+                            <span class="choice-label">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Preparedness -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label">Are you prepared to actively respond to leads each week? *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="leads_response" value="Yes" required>
+                            <span class="choice-label">Yes</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="leads_response" value="No">
+                            <span class="choice-label">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Finish & Redirect →</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/forms.js"></script>
+</body>
+
+</html>

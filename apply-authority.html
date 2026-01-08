@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Authority Builder™ | BuzzSavvy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+
+<body class="form-body">
+
+    <div class="form-page-container">
+        <header class="form-header">
+            <h1 class="form-title">Authority Builder™</h1>
+            <p class="form-subtitle">This application helps assess strategic alignment. Please fill out the details
+                below.</p>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <form id="application-form" data-redirect="https://calendly.com/buzzsavvy/strategy-call">
+
+            <!-- Step 1: Basic Info -->
+            <div class="form-step active">
+                <div class="question-group">
+                    <label class="question-label" for="full-name">Full name *</label>
+                    <input type="text" id="full-name" name="name" class="form-input" placeholder="Enter your full name"
+                        required>
+                </div>
+                <div class="question-group">
+                    <label class="question-label" for="linkedin-url">LinkedIn profile URL *</label>
+                    <input type="url" id="linkedin-url" name="linkedin" class="form-input"
+                        placeholder="https://linkedin.com/in/yourprofile" required>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Role & Objective -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label">Your current role *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Founder" required>
+                            <span class="choice-label">Founder</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Coach">
+                            <span class="choice-label">Coach</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Consultant">
+                            <span class="choice-label">Consultant</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="role" value="Solopreneur">
+                            <span class="choice-label">Solopreneur</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="question-group">
+                    <label class="question-label">Your primary objective on LinkedIn *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="objective" value="Clear positioning" required>
+                            <span class="choice-label">Clear positioning</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="objective" value="Authority building">
+                            <span class="choice-label">Authority building</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="objective" value="Inbound leads">
+                            <span class="choice-label">Inbound leads</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="objective" value="Thought leadership">
+                            <span class="choice-label">Thought leadership</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Offer & Pain points -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label" for="offer-desc">Briefly describe your offer and who you serve
+                        *</label>
+                    <textarea id="offer-desc" name="offer" class="form-input"
+                        placeholder="I help [target audience] achieve [result] with [my method]..." required></textarea>
+                </div>
+                <div class="question-group">
+                    <label class="question-label" for="unclear">What feels unclear or misaligned on your LinkedIn today?
+                        *</label>
+                    <textarea id="unclear" name="misalignment" class="form-input"
+                        placeholder="Describe current challenges..." required></textarea>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Investment & Timeline -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label">Monthly investment range you’re comfortable with *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="investment" value="$500+" required>
+                            <span class="choice-label">$500+ / ₹35,000+</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="investment" value="$1,000+">
+                            <span class="choice-label">$1,000+ / ₹80,000+</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="investment" value="$2,000+">
+                            <span class="choice-label">$2,000+ / ₹1.6L+</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="question-group">
+                    <label class="question-label">When would you like to begin?</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="start" value="Immediately">
+                            <span class="choice-label">Immediately</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="start" value="Within 30 days">
+                            <span class="choice-label">Within 30 days</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="start" value="1-3 months">
+                            <span class="choice-label">1–3 months</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Final Check -->
+            <div class="form-step">
+                <div class="question-group">
+                    <label class="question-label">Do you understand this is a strategic personal branding engagement,
+                        not influencer-style promotion? *</label>
+                    <div class="choices-grid">
+                        <label class="choice-item">
+                            <input type="radio" name="strategic" value="Yes" required>
+                            <span class="choice-label">Yes</span>
+                        </label>
+                        <label class="choice-item">
+                            <input type="radio" name="strategic" value="No">
+                            <span class="choice-label">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="button" class="form-btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="form-btn btn-primary next-step">Finish & Redirect →</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/forms.js"></script>
+</body>
+
+</html>
