@@ -745,6 +745,7 @@ body {
     line-height: 160%;
     letter-spacing: 0;
     margin-bottom: 32px;
+    color: #1F2937;
 }
 
 /* Testimonial Author */
@@ -758,12 +759,14 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 19.53px;
     font-weight: 600;
+    color: #111827;
 }
 
 .author-title {
     font-family: 'Poppins', sans-serif;
     font-size: 15.97px;
     font-weight: 400;
+    color: #6F8F71;
 }
 
 /* Navigation Buttons - Hidden per Figma design */
@@ -1579,6 +1582,30 @@ textarea.form-input {
     .author-title {
         font-size: 13px;
     }
+
+    /* Case Studies Mobile Fixes */
+    .section-5 {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .section-5-container {
+        padding: 0 20px;
+    }
+
+    .case-studies-heading {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .case-studies-slider {
+        overflow: hidden;
+    }
+
+    .case-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1591,46 +1618,103 @@ textarea.form-input {
         margin-bottom: 32px;
     }
 
+    /* FIX: Show one card at a time on mobile */
+    .testimonials-slider-wrapper {
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
     .testimonials-slider {
         padding: 20px 0;
     }
 
+    .slider-track {
+        gap: 16px;
+        padding: 0 16px;
+    }
+
     .testimonial-card {
-        flex: 0 0 260px;
+        flex: 0 0 calc(100vw - 64px);
+        min-width: calc(100vw - 64px);
         padding: 24px;
         border-radius: 20px;
+        scroll-snap-align: center;
+        background: #FFFFFF;
+        opacity: 1;
+        transform: none;
     }
 
     .testimonial-card.active {
-        transform: scale(1);
+        transform: none;
     }
 
     .testimonial-card:not(.active) {
-        transform: scale(0.9);
-        opacity: 0.5;
-    }
-
-    .slider-track {
-        gap: 12px;
-        padding: 0 20px;
+        transform: none;
+        opacity: 1;
+        background: #FFFFFF;
     }
 
     .quote-icon {
-        font-size: 32px;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
+    }
+
+    .quote-icon svg {
+        width: 32px;
+        height: 24px;
     }
 
     .testimonial-text {
         font-size: 14px;
         line-height: 150%;
         margin-bottom: 20px;
+        color: #1F2937;
     }
 
     .author-name {
         font-size: 15px;
+        color: #111827;
     }
 
     .author-title {
         font-size: 12px;
+        color: #6F8F71;
+    }
+
+    /* Case Studies Mobile */
+    .section-5 {
+        padding: 40px 0;
+    }
+
+    .section-5-container {
+        padding: 0 16px;
+    }
+
+    .case-studies-heading {
+        font-size: 26px;
+        margin-bottom: 32px;
+    }
+
+    .case-studies-slider-wrapper {
+        overflow: hidden;
+    }
+
+    .case-studies-slider {
+        overflow: hidden;
+    }
+
+    .case-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+    .case-card-inner {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .panel-title {
+        font-size: 16px;
     }
 }

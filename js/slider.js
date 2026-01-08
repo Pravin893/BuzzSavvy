@@ -123,6 +123,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Re-calculate on resize
         window.addEventListener('resize', updateSlider);
+
+        // Auto-play for carousel (testimonials) - change every 5 seconds
+        if (isCarousel) {
+            let autoPlayInterval;
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % cards.length;
+                    updateSlider();
+                }, 5000); // 5 seconds
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            // Start auto-play
+            startAutoPlay();
+
+            // Pause on hover/touch
+            const sliderWrapper = document.querySelector('.testimonials-slider-wrapper');
+            if (sliderWrapper) {
+                sliderWrapper.addEventListener('mouseenter', stopAutoPlay);
+                sliderWrapper.addEventListener('mouseleave', startAutoPlay);
+                sliderWrapper.addEventListener('touchstart', stopAutoPlay, { passive: true });
+                sliderWrapper.addEventListener('touchend', () => {
+                    setTimeout(startAutoPlay, 3000); // Resume after 3 seconds
+                }, { passive: true });
+            }
+        }
     }
 
     // Initialize Testimonials Slider
@@ -204,5 +234,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         caseTrack.style.cursor = 'grab';
+
+        // Auto-play for Case Studies - change every 5 seconds
+        let caseAutoPlayInterval;
+
+        function startCaseAutoPlay() {
+            caseAutoPlayInterval = setInterval(() => {
+                currentCaseIndex = (currentCaseIndex + 1) % caseCards.length;
+                goToCase(currentCaseIndex);
+            }, 5000); // 5 seconds
+        }
+
+        function stopCaseAutoPlay() {
+            clearInterval(caseAutoPlayInterval);
+        }
+
+        // Start auto-play
+        startCaseAutoPlay();
+
+        // Pause on hover/touch
+        const caseWrapper = document.querySelector('.case-studies-slider-wrapper');
+        if (caseWrapper) {
+            caseWrapper.addEventListener('mouseenter', stopCaseAutoPlay);
+            caseWrapper.addEventListener('mouseleave', startCaseAutoPlay);
+            caseWrapper.addEventListener('touchstart', stopCaseAutoPlay, { passive: true });
+            caseWrapper.addEventListener('touchend', () => {
+                setTimeout(startCaseAutoPlay, 3000); // Resume after 3 seconds
+            }, { passive: true });
+        }
     }
 });
