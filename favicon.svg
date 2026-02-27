@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark background with slight rounding to match brand aesthetic -->
+  <rect width="100" height="100" fill="#030712" rx="20"/>
+  
+  <!-- The main blue U shape -->
+  <path d="M 25,30 
+           L 25,60 
+           C 25,78 40,85 50,85 
+           C 60,85 75,78 75,60 
+           L 75,30 
+           L 55,30 
+           L 55,55 
+           C 55,62 50,65 50,65 
+           C 50,65 45,62 45,55 
+           L 45,30 
+           Z" fill="#437DFC"/>
+           
+  <!-- The top white cutouts -->
+  <rect x="25" y="30" width="12" height="12" fill="#ffffff" />
+  <rect x="63" y="30" width="12" height="12" fill="#ffffff" />
+</svg>
