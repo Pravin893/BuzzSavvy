@@ -49,7 +49,7 @@
 
         <div class="hero-content fade-up">
             <h1 class="main-heading">
-                Build repeatable lead engine<br>via inbound-first <strong>personal branding</strong>
+                Build repeatable lead engine via<br>inbound-first <strong>personal branding</strong>
             </h1>
             <p class="sub-heading">
                 LinkedIn System that delivers 2–3 warm, qualified inbound leads every month.<br>Using our 3-step method,
@@ -145,6 +145,7 @@
                     <br>
                     <p>If you don't see measurable growth, you don't pay. But if you do see results? Well, that's when
                         things get really interesting.</p>
+                    <div class="slide-arrow">»»</div>
                 </div>
             </div>
         </div>
@@ -152,12 +153,13 @@
 
     <!-- Schedule Section -->
     <section id="schedule" class="schedule-section">
-        <h3 class="schedule-title fade-up">We'll look at your business & build your lead generation growth plan together
-        </h3>
         <div class="calendly-wrapper fade-up">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/pravinvijay03/personal-branding"
-                style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <div class="calendly-inline-widget"
+                data-url="https://calendly.com/kirtitandel/founder_discovery_call?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0f172a"
+                style="min-width:320px;height:700px;">
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
+            </div>
         </div>
     </section>
 
@@ -211,6 +213,16 @@
             // Sync current index on manual scroll
             slider.addEventListener('scrollend', () => {
                 current = Math.round(slider.scrollLeft / slider.offsetWidth);
+            });
+
+            // Arrow click to go to next slide
+            slider.addEventListener('click', (e) => {
+                // Check if they clicked the exact arrow or the text inside it
+                if (e.target.closest('.slide-arrow')) {
+                    // Modulo totalSlides automatically loops index back to 0 on the last slide
+                    current = (current + 1) % totalSlides;
+                    goToSlide(current);
+                }
             });
         });
     </script>
