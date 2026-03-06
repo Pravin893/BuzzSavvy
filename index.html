@@ -71,6 +71,7 @@
                         <p>The leader who finally cracked the code on their team dynamics.</p>
                         <div class="slide-nav">
                             <div class="slide-arrow-back">««</div>
+                            <div class="slide-count">1 / 6</div>
                             <div class="slide-arrow">»»</div>
                         </div>
                     </div>
@@ -89,6 +90,7 @@
                         </ul>
                         <div class="slide-nav">
                             <div class="slide-arrow-back">««</div>
+                            <div class="slide-count">2 / 6</div>
                             <div class="slide-arrow">»»</div>
                         </div>
                     </div>
@@ -107,6 +109,7 @@
                         <p><strong>Phase 3: Convert</strong> (They slide into YOUR DMs asking how to work together)</p>
                         <div class="slide-nav">
                             <div class="slide-arrow-back">««</div>
+                            <div class="slide-count">3 / 6</div>
                             <div class="slide-arrow">»»</div>
                         </div>
                     </div>
@@ -125,6 +128,7 @@
                         <p>Month 3: You're the coach other coaches follow.</p>
                         <div class="slide-nav">
                             <div class="slide-arrow-back">««</div>
+                            <div class="slide-count">4 / 6</div>
                             <div class="slide-arrow">»»</div>
                         </div>
                     </div>
@@ -140,27 +144,13 @@
                             what you do best - coaching.</p>
                         <div class="slide-nav">
                             <div class="slide-arrow-back">««</div>
+                            <div class="slide-count">5 / 6</div>
                             <div class="slide-arrow">»»</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 6 -->
-                <div class="slide-wrapper">
-                    <div class="glass-card">
-                        <p>Sarah was getting 47 profile views per month. Decent, but not life-changing. Month 2 with us?
-                            847
-                            views and her <strong>first $15K client</strong> from an inbound LinkedIn message.</p>
-                        <br>
-                        <p>She literally said 'I can't believe someone found ME.'</p>
-                        <div class="slide-nav">
-                            <div class="slide-arrow-back">««</div>
-                            <div class="slide-arrow">»»</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 7 -->
                 <div class="slide-wrapper">
                     <div class="glass-card">
                         <p>Here's the thing - you're already investing time in LinkedIn. Random posts, hoping something
@@ -172,6 +162,7 @@
                             things get really interesting.</p>
                         <div class="slide-nav">
                             <div class="slide-arrow-back">««</div>
+                            <div class="slide-count">6 / 6</div>
                             <div class="slide-arrow">»»</div>
                         </div>
                     </div>
@@ -213,7 +204,6 @@
 
             let current = 0;
             const totalSlides = slides.length;
-            const interval = 10000;
             let isAnimating = false;
 
             function goToSlide(index) {
@@ -224,28 +214,13 @@
                 setTimeout(() => { isAnimating = false; }, 800);
             }
 
-            let autoSlide = setInterval(() => {
-                goToSlide(current + 1);
-            }, interval);
-
-            // Pause on hover
-            const section = document.querySelector('.apply-section');
-            section.addEventListener('mouseenter', () => clearInterval(autoSlide));
-            section.addEventListener('mouseleave', () => {
-                autoSlide = setInterval(() => goToSlide(current + 1), interval);
-            });
-
-            // Next arrow click
+            // Next / Prev arrow click
             track.addEventListener('click', (e) => {
                 if (e.target.closest('.slide-arrow')) {
-                    clearInterval(autoSlide);
                     goToSlide(current + 1);
-                    autoSlide = setInterval(() => goToSlide(current + 1), interval);
                 }
                 if (e.target.closest('.slide-arrow-back')) {
-                    clearInterval(autoSlide);
                     goToSlide(current - 1);
-                    autoSlide = setInterval(() => goToSlide(current + 1), interval);
                 }
             });
         });
